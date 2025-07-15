@@ -1,0 +1,5 @@
+id,user_id,text,primary_emotion,confidence,age,gender,age_group,keywords_matched,keyword_count,elderly_specific_health,elderly_specific_family,elderly_specific_loneliness,elderly_specific_nostalgia,ai_suggestions,created_at,updated_at
+elderly_1751788071921,elderly_user_001,今天孙子来看我了，真的很开心，但是他走了以后又觉得有点孤单,happy,0.85,70,女,senior,"孙子,开心,孤单",3,0.1,0.9,0.6,0.2,"建议与家人多多交流分享,可以考虑参加社区活动",2025-07-06T15:47:51.921276,2025-07-06T15:47:51.921276
+elderly_1751788071922,elderly_user_002,最近身体不太好，经常失眠，担心会不会有什么大问题,worried,0.78,68,男,elderly,"身体,失眠,担心",3,0.9,0.2,0.3,0.1,"建议定期体检,适当的担心是正常的，但不要过度焦虑",2025-07-06T15:47:51.922275,2025-07-06T15:47:51.922275
+elderly_1751788071982,test_elderly_001,今天孙子来看我了，真的很开心，但是他走了以后又觉得有点孤单,happy,0.85,70,女,senior,孙子,1,0.1,0.9,0.6,0.2,建议与家人多多交流分享,2025-07-06T15:47:51.982744,2025-07-06T15:47:51.982744
+elderly_1751788071984,test_elderly_002,最近身体不太好，经常失眠，担心会不会有什么大问题,worried,0.85,68,男,,担心,1,0.9,0.2,0.3,0.1,建议定期体检,2025-07-06T15:47:51.984743,2025-07-06T15:47:51.984743

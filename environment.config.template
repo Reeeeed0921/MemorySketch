@@ -1,0 +1,241 @@
+# ========== PGG情感记忆生成系统 - 环境变量配置模板 ==========
+# 复制此文件为 .env 并填入您的真实配置
+
+# ========== 基础配置 ==========
+DEBUG=False
+HOST=0.0.0.0
+PORT=5000
+
+# ========== 1. 搜索服务配置 ==========
+ENABLE_SEARCH=True
+SEARCH_RESULTS_PER_PAGE=20
+MAX_SEARCH_RESULTS=1000
+
+# Elasticsearch配置
+ELASTICSEARCH_URL=http://localhost:9200
+ELASTICSEARCH_API_KEY=your_elasticsearch_api_key
+ELASTICSEARCH_API_SECRET=your_elasticsearch_api_secret
+
+# Algolia配置
+ALGOLIA_APP_ID=your_algolia_app_id
+ALGOLIA_API_KEY=your_algolia_api_key
+ALGOLIA_API_SECRET=your_algolia_api_secret
+
+# ========== 2. 数据分析服务配置 ==========
+ENABLE_ANALYTICS=True
+ANALYTICS_CACHE_TTL=3600
+
+# Google Analytics配置
+GOOGLE_ANALYTICS_API_KEY=your_google_analytics_api_key
+GOOGLE_ANALYTICS_API_SECRET=your_google_analytics_api_secret
+GOOGLE_ANALYTICS_VIEW_ID=your_google_analytics_view_id
+
+# 百度统计配置
+BAIDU_TONGJI_API_KEY=your_baidu_tongji_api_key
+BAIDU_TONGJI_API_SECRET=your_baidu_tongji_api_secret
+BAIDU_TONGJI_SITE_ID=your_baidu_tongji_site_id
+
+# ========== 3. 文件存储服务配置 ==========
+ENABLE_FILE_STORAGE=True
+MAX_FILE_SIZE=104857600  # 100MB
+
+# 阿里云OSS配置
+ALIYUN_OSS_ACCESS_KEY_ID=your_aliyun_oss_access_key_id
+ALIYUN_OSS_ACCESS_KEY_SECRET=your_aliyun_oss_access_key_secret
+ALIYUN_OSS_BUCKET_NAME=your_aliyun_oss_bucket_name
+ALIYUN_OSS_ENDPOINT=your_aliyun_oss_endpoint
+
+# 腾讯云COS配置
+TENCENT_COS_SECRET_ID=your_tencent_cos_secret_id
+TENCENT_COS_SECRET_KEY=your_tencent_cos_secret_key
+TENCENT_COS_BUCKET_NAME=your_tencent_cos_bucket_name
+TENCENT_COS_REGION=your_tencent_cos_region
+
+# AWS S3配置
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+AWS_S3_BUCKET_NAME=your_aws_s3_bucket_name
+AWS_S3_REGION=your_aws_s3_region
+
+# ========== 4. 实时通信服务配置 ==========
+ENABLE_REALTIME=True
+WEBSOCKET_SECRET_KEY=ws-secret-key-2024
+SOCKETIO_API_KEY=your_socketio_api_key
+
+# Firebase推送配置
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_API_SECRET=your_firebase_api_secret
+FIREBASE_PROJECT_ID=your_firebase_project_id
+
+# 极光推送配置
+JPUSH_APP_KEY=your_jpush_app_key
+JPUSH_APP_SECRET=your_jpush_app_secret
+JPUSH_MASTER_SECRET=your_jpush_master_secret
+
+# ========== 5. 监控服务配置 ==========
+ENABLE_MONITORING=True
+MONITORING_INTERVAL=60
+
+# Prometheus配置
+PROMETHEUS_URL=http://localhost:9090
+PROMETHEUS_API_KEY=your_prometheus_api_key
+
+# Grafana配置
+GRAFANA_URL=http://localhost:3000
+GRAFANA_API_KEY=your_grafana_api_key
+GRAFANA_API_SECRET=your_grafana_api_secret
+
+# DataDog配置
+DATADOG_API_KEY=your_datadog_api_key
+DATADOG_APP_KEY=your_datadog_app_key
+
+# ========== 6. 缓存服务配置 ==========
+ENABLE_CACHE=True
+CACHE_TTL=3600
+CACHE_MAX_SIZE=1000
+
+# Redis配置
+REDIS_URL=redis://localhost:6379/0
+REDIS_PASSWORD=your_redis_password
+REDIS_API_KEY=your_redis_api_key
+
+# ========== 7. 日志服务配置 ==========
+ENABLE_LOGGING=True
+LOG_LEVEL=INFO
+
+# LogStash配置
+LOGSTASH_URL=http://localhost:5044
+LOGSTASH_API_KEY=your_logstash_api_key
+
+# 阿里云日志服务配置
+ALIYUN_LOG_ACCESS_KEY_ID=your_aliyun_log_access_key_id
+ALIYUN_LOG_ACCESS_KEY_SECRET=your_aliyun_log_access_key_secret
+ALIYUN_LOG_PROJECT=your_aliyun_log_project
+ALIYUN_LOG_STORE=your_aliyun_log_store
+
+# ========== 8. 翻译服务配置 ==========
+ENABLE_TRANSLATION=True
+DEFAULT_TRANSLATE_LANGUAGE=zh-CN
+
+# Google翻译配置
+GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key
+GOOGLE_TRANSLATE_API_SECRET=your_google_translate_api_secret
+
+# 百度翻译配置
+BAIDU_TRANSLATE_APP_ID=your_baidu_translate_app_id
+BAIDU_TRANSLATE_API_KEY=your_baidu_translate_api_key
+BAIDU_TRANSLATE_API_SECRET=your_baidu_translate_api_secret
+
+# 腾讯翻译配置
+TENCENT_TRANSLATE_SECRET_ID=your_tencent_translate_secret_id
+TENCENT_TRANSLATE_SECRET_KEY=your_tencent_translate_secret_key
+
+# ========== 9. 内容审核服务配置 ==========
+ENABLE_CONTENT_MODERATION=True
+MODERATION_THRESHOLD=0.8
+
+# 阿里云内容安全配置
+ALIYUN_CONTENT_SECURITY_ACCESS_KEY_ID=your_aliyun_content_security_access_key_id
+ALIYUN_CONTENT_SECURITY_ACCESS_KEY_SECRET=your_aliyun_content_security_access_key_secret
+
+# 腾讯内容安全配置
+TENCENT_CMS_SECRET_ID=your_tencent_cms_secret_id
+TENCENT_CMS_SECRET_KEY=your_tencent_cms_secret_key
+
+# ========== 10. 邮件服务配置 ==========
+ENABLE_EMAIL=True
+EMAIL_RATE_LIMIT=100
+
+# SendGrid配置
+SENDGRID_API_KEY=your_sendgrid_api_key
+SENDGRID_API_SECRET=your_sendgrid_api_secret
+
+# 阿里云邮件推送配置
+ALIYUN_EMAIL_ACCESS_KEY_ID=your_aliyun_email_access_key_id
+ALIYUN_EMAIL_ACCESS_KEY_SECRET=your_aliyun_email_access_key_secret
+
+# ========== 批量处理配置 ==========
+ENABLE_BATCH_PROCESSING=True
+BATCH_SIZE=10
+MAX_BATCH_SIZE=100
+BATCH_TIMEOUT=300
+
+# ========== 音频处理配置 ==========
+AUDIO_SAMPLE_RATE=16000
+AUDIO_CHANNELS=1
+AUDIO_FORMAT=wav
+
+# ========== 数据库配置 ==========
+# MongoDB配置
+MONGODB_HOST=localhost
+MONGODB_PORT=27017
+MONGODB_NAME=pgg_system
+MONGODB_USER=pgg_user
+MONGODB_PASSWORD=your_mongodb_password
+
+# 本地存储配置
+USE_LOCAL_STORAGE=True
+LOCAL_STORAGE_PATH=./storage
+
+# ========== 安全配置 ==========
+SECRET_KEY=your_secret_key_here
+JWT_SECRET_KEY=your_jwt_secret_key_here
+ENCRYPTION_KEY=your_encryption_key_here
+
+# ========== 其他配置 ==========
+MAX_CONTENT_LENGTH=16777216  # 16MB
+ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5000
+CORS_ENABLED=True
+
+# ========== 第三方服务配置 ==========
+# 语音识别服务
+OPENAI_API_KEY=your_openai_api_key
+AZURE_SPEECH_KEY=your_azure_speech_key
+AZURE_SPEECH_REGION=your_azure_speech_region
+GOOGLE_SPEECH_API_KEY=your_google_speech_api_key
+IFLYTEK_APP_ID=your_iflytek_app_id
+IFLYTEK_API_KEY=your_iflytek_api_key
+IFLYTEK_API_SECRET=your_iflytek_api_secret
+
+# DeepSeek AI服务（专业情感分析，特别适合老人群体）
+DEEPSEEK_API_KEY=your_deepseek_api_key
+DEEPSEEK_API_URL=https://api.deepseek.com
+DEEPSEEK_MODEL=deepseek-chat
+DEEPSEEK_MAX_TOKENS=1000
+DEEPSEEK_TEMPERATURE=0.7
+
+# 图像生成服务
+STABILITY_AI_API_KEY=your_stability_ai_api_key
+MIDJOURNEY_API_KEY=your_midjourney_api_key
+DALLE_API_KEY=your_dalle_api_key
+
+# 科大讯飞图像生成服务
+IFLYTEK_IMAGE_API_ID=e5bc8a2a
+IFLYTEK_IMAGE_API_KEY=956565afe6a1ddc7f269e627b7cfee32
+IFLYTEK_IMAGE_API_SECRET=ZGJkOGM5Mjc0NWVhZDlhYzllZDdiMjY3
+
+# 科大讯飞性别年龄识别服务
+IFLYTEK_GENDER_AGE_API_ID=e5bc8a2a
+IFLYTEK_GENDER_AGE_API_KEY=956565afe6a1ddc7f269e627b7cfee32
+IFLYTEK_GENDER_AGE_API_SECRET=ZGJkOGM5Mjc0NWVhZDlhYzllZDdiMjY3
+
+# ========== 开发和测试配置 ==========
+TESTING=False
+TEST_DATABASE_URL=sqlite:///test.db
+FLASK_ENV=production
+
+# ========== 国际化配置 ==========
+DEFAULT_LANGUAGE=zh-CN
+SUPPORTED_LANGUAGES=zh-CN,en-US,ja-JP,ko-KR
+
+# ========== 性能配置 ==========
+WORKER_PROCESSES=4
+WORKER_THREADS=2
+WORKER_TIMEOUT=30
+KEEPALIVE_TIMEOUT=2
+
+# ========== 限流配置 ==========
+RATE_LIMIT_ENABLED=True
+RATE_LIMIT_PER_MINUTE=100
+RATE_LIMIT_PER_HOUR=1000
+RATE_LIMIT_PER_DAY=10000 

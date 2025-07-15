@@ -1,0 +1,386 @@
+[
+  {
+    "id": "0b81470d-0553-4216-bd3c-59eb6d601ee5",
+    "user_id": "test_user",
+    "user_input": "测试用户输入",
+    "memory_text": "测试回忆文本",
+    "image_url": "/test/image.png",
+    "emotion_result": {
+      "primary_emotion": "happy",
+      "confidence": 0.8
+    },
+    "created_at": "2025-07-04T18:09:29.509953"
+  },
+  {
+    "id": "8adb3d85-2584-4e26-855e-7292ac9a9c97",
+    "user_id": "workflow_test_user",
+    "user_input": "今天和家人一起度过了美好的时光，感觉很幸福",
+    "memory_text": "回想起今天和家人一起度过了美好的时光，感觉很幸福总是会让我不由自主地微笑。那种明显的快乐的感觉，就像春天里的第一缕阳光。",
+    "image_url": "./storage/images\\placeholder_20250704_180929.png",
+    "emotion_result": {
+      "primary_emotion": "happy",
+      "confidence": 0.75,
+      "emotion_scores": {
+        "happy": 0.75,
+        "sad": 0,
+        "angry": 0,
+        "fear": 0,
+        "surprise": 0,
+        "disgust": 0,
+        "love": 0,
+        "peaceful": 0,
+        "nostalgic": 0,
+        "hopeful": 0,
+        "grateful": 0,
+        "disappointed": 0
+      },
+      "valence": 0.875,
+      "arousal": 0.0,
+      "dominance": 0.875,
+      "analysis_model": "Rule_Based"
+    },
+    "created_at": "2025-07-04T18:09:29.554682"
+  },
+  {
+    "id": "56ad2793-b58c-454d-b68c-d0fcfb25e90c",
+    "user_id": "demo_user",
+    "user_input": "今天心情很好，想要记录这美好的时刻",
+    "memory_text": "那时的淡淡的快乐至今还深深印在我心里。今天心情很好，想要记录这美好的时刻这样的时刻，让生活变得如此美好。",
+    "image_url": "./storage/images\\placeholder_20250704_182933.png",
+    "emotion_result": {
+      "primary_emotion": "happy",
+      "confidence": 0,
+      "emotion_scores": {
+        "happy": 0,
+        "sad": 0,
+        "angry": 0,
+        "fear": 0,
+        "surprise": 0,
+        "disgust": 0,
+        "love": 0,
+        "peaceful": 0,
+        "nostalgic": 0,
+        "hopeful": 0,
+        "grateful": 0,
+        "disappointed": 0
+      },
+      "valence": 0.5,
+      "arousal": 0.0,
+      "dominance": 0.5,
+      "analysis_model": "Rule_Based"
+    },
+    "created_at": "2025-07-04T18:29:33.987033"
+  },
+  {
+    "id": "c9658f94-341e-40a8-b6eb-869c48af1076",
+    "user_id": "test_user",
+    "user_input": "测试准确率优先策略",
+    "memory_text": "这是一段强烈的惊讶的回忆。测试准确率优先策略在我心中留下了深刻的印象，每个细节都值得珍藏。",
+    "image_url": "./storage/images\\placeholder_20250704_183447.png",
+    "emotion_result": {
+      "primary_emotion": "surprise",
+      "confidence": 0.8475872234518633,
+      "emotion_scores": {
+        "happy": 0.1773807706202188,
+        "sad": 0.17401899082505246,
+        "angry": 0.2072593651539168,
+        "fear": 0.23688021910569815,
+        "surprise": 0.8475872234518633,
+        "love": 0.2873059677386204,
+        "peaceful": 0.10434750170302198,
+        "nostalgic": 0.24801981495385175
+      },
+      "valence": -0.9496027529859388,
+      "arousal": -0.38728887659875655,
+      "dominance": 0.5751754321390918,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T18:34:47.585780"
+  },
+  {
+    "id": "9f64a60c-ebc3-46f5-82b5-fb25e8960f6b",
+    "user_id": "test_user_1",
+    "user_input": "今天天气很好，我心情特别愉快！",
+    "memory_text": "回想起今天天气很好，我心情特别愉快！那种强烈的愤怒的感觉仍然历历在目。当时的情绪就像汹涌的海浪。",
+    "image_url": "./storage/images\\placeholder_20250704_183624.png",
+    "emotion_result": {
+      "primary_emotion": "angry",
+      "confidence": 0.8630313026257124,
+      "emotion_scores": {
+        "happy": 0.21344787448771724,
+        "sad": 0.23563506237151902,
+        "angry": 0.8630313026257124,
+        "fear": 0.2622765419752717,
+        "surprise": 0.13257496791060777,
+        "love": 0.253057209345833,
+        "peaceful": 0.1716880563006159,
+        "nostalgic": 0.1484010884451995
+      },
+      "valence": 0.05837100661774808,
+      "arousal": 0.14931660519670187,
+      "dominance": 0.29947399063718594,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T18:36:24.346239"
+  },
+  {
+    "id": "698c4c24-cf3a-4785-8d99-69b2ceb67dd3",
+    "user_id": "test_user_2",
+    "user_input": "失去了重要的人，心情很沉重...",
+    "memory_text": "回想起失去了重要的人，心情很沉重...总是会让我不由自主地微笑。那种强烈的快乐的感觉，就像春天里的第一缕阳光。",
+    "image_url": "./storage/images\\placeholder_20250704_183629.png",
+    "emotion_result": {
+      "primary_emotion": "happy",
+      "confidence": 0.8130185244934334,
+      "emotion_scores": {
+        "happy": 0.8130185244934334,
+        "sad": 0.18674575580195235,
+        "angry": 0.21723439815628015,
+        "fear": 0.1249710244306652,
+        "surprise": 0.23041727359658976,
+        "love": 0.2815101758340164,
+        "peaceful": 0.10178678432675836,
+        "nostalgic": 0.2833310042127939
+      },
+      "valence": 0.9970555108784107,
+      "arousal": -0.2371708119536018,
+      "dominance": -0.03621297470133311,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T18:36:29.435614"
+  },
+  {
+    "id": "900b4aaf-316b-4ab8-b2be-03ae18e22948",
+    "user_id": "test_user_3",
+    "user_input": "这太让人愤怒了！完全不能接受！",
+    "memory_text": "回想起这太让人愤怒了！完全不能接受！总是会让我不由自主地微笑。那种强烈的快乐的感觉，就像春天里的第一缕阳光。",
+    "image_url": "./storage/images\\placeholder_20250704_183634.png",
+    "emotion_result": {
+      "primary_emotion": "happy",
+      "confidence": 0.8892052665578967,
+      "emotion_scores": {
+        "happy": 0.8892052665578967,
+        "sad": 0.2377532852882548,
+        "angry": 0.29413716392673483,
+        "fear": 0.14700001557982872,
+        "surprise": 0.11679711169178807,
+        "love": 0.19804496723735915,
+        "peaceful": 0.11274934054268744,
+        "nostalgic": 0.2587428831661637
+      },
+      "valence": -0.10931131722332599,
+      "arousal": 0.043496447759393764,
+      "dominance": -0.6420742126573491,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T18:36:34.532743"
+  },
+  {
+    "id": "70c083f6-9029-4a0b-8512-baddeac8cf10",
+    "user_id": "test_user_4",
+    "user_input": "既兴奋又紧张，这是人生的重要时刻",
+    "memory_text": "那时的强烈的愤怒让我久久不能平静。既兴奋又紧张，这是人生的重要时刻这样的经历教会了我如何处理情绪。",
+    "image_url": "./storage/images\\placeholder_20250704_183639.png",
+    "emotion_result": {
+      "primary_emotion": "angry",
+      "confidence": 0.8691422152699552,
+      "emotion_scores": {
+        "happy": 0.28855639404930755,
+        "sad": 0.1624965512243733,
+        "angry": 0.8691422152699552,
+        "fear": 0.20523469398975022,
+        "surprise": 0.22302495155421803,
+        "love": 0.29554453613181103,
+        "peaceful": 0.2482943077714316,
+        "nostalgic": 0.19211085714835213
+      },
+      "valence": 0.2487497866460744,
+      "arousal": -0.16001182871436037,
+      "dominance": 0.2950113013057061,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T18:36:39.635847"
+  },
+  {
+    "id": "5eabc246-4051-4caa-b740-ea136266b1f9",
+    "user_id": "user123",
+    "user_input": "我想儿子了",
+    "memory_text": "回想起我想儿子了那种强烈的愤怒的感觉仍然历历在目。当时的情绪就像汹涌的海浪。",
+    "image_url": "./storage/images\\placeholder_20250704_214534.png",
+    "emotion_result": {
+      "primary_emotion": "angry",
+      "confidence": 0.9160467306911437,
+      "emotion_scores": {
+        "happy": 0.28555450450851416,
+        "sad": 0.2908273109080644,
+        "angry": 0.9160467306911437,
+        "fear": 0.11152662189153979,
+        "surprise": 0.2651736336239958,
+        "love": 0.19462417806822052,
+        "peaceful": 0.21034986443889125,
+        "nostalgic": 0.1162335191179123
+      },
+      "valence": 0.3596250421971219,
+      "arousal": -0.896764826692122,
+      "dominance": -0.6648018792430079,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T21:45:34.073796"
+  },
+  {
+    "id": "ec5e75e9-70bd-4a7d-9ae4-8e15d3ebebbd",
+    "user_id": "test_user_1",
+    "user_input": "今天天气很好，我心情特别愉快！",
+    "memory_text": "这是一段充满强烈的怀旧的回忆。今天天气很好，我心情特别愉快！让我想起了过往的时光，像是翻阅泛黄的相册。",
+    "image_url": "./storage/images\\placeholder_20250704_224030.png",
+    "emotion_result": {
+      "primary_emotion": "nostalgic",
+      "confidence": 0.9059651312170499,
+      "emotion_scores": {
+        "happy": 0.25406286340744333,
+        "sad": 0.2265516801526705,
+        "angry": 0.19520678153944332,
+        "fear": 0.22335659271970293,
+        "surprise": 0.2955202768546008,
+        "love": 0.22500647818643074,
+        "peaceful": 0.15924706860265747,
+        "nostalgic": 0.9059651312170499
+      },
+      "valence": -0.08110550571156083,
+      "arousal": 0.6740720082143681,
+      "dominance": -0.6488479786107908,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T22:40:30.383161"
+  },
+  {
+    "id": "ecd6ac6d-f15e-4a82-9ce1-9ea2851dab3e",
+    "user_id": "test_user_2",
+    "user_input": "失去了重要的人，心情很沉重...",
+    "memory_text": "想起失去了重要的人，心情很沉重...总是让我感到强烈的平静。那种感觉就像夏日黄昏的清风。",
+    "image_url": "./storage/images\\placeholder_20250704_224035.png",
+    "emotion_result": {
+      "primary_emotion": "peaceful",
+      "confidence": 0.8479842603812516,
+      "emotion_scores": {
+        "happy": 0.1728090423053846,
+        "sad": 0.11859619997203524,
+        "angry": 0.2121646317835087,
+        "fear": 0.2250569176454659,
+        "surprise": 0.1012970751738984,
+        "love": 0.20543434595295906,
+        "peaceful": 0.8479842603812516,
+        "nostalgic": 0.14799888615814777
+      },
+      "valence": -0.2719277826661821,
+      "arousal": -0.8774343237273825,
+      "dominance": 0.9344149340441044,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T22:40:35.454575"
+  },
+  {
+    "id": "364f53e5-a802-4af4-9a98-9d079f90e5b2",
+    "user_id": "test_user_3",
+    "user_input": "这太让人愤怒了！完全不能接受！",
+    "memory_text": "这是一段强烈的平静的回忆。这太让人愤怒了！完全不能接受！让我感到内心宁静，像是湖面上的微风。",
+    "image_url": "./storage/images\\placeholder_20250704_224040.png",
+    "emotion_result": {
+      "primary_emotion": "peaceful",
+      "confidence": 0.8902166125518168,
+      "emotion_scores": {
+        "happy": 0.17283376489800933,
+        "sad": 0.29027155742103206,
+        "angry": 0.18205455348091762,
+        "fear": 0.15486421001049694,
+        "surprise": 0.2011287003183982,
+        "love": 0.2257449428505342,
+        "peaceful": 0.8902166125518168,
+        "nostalgic": 0.21602551041934753
+      },
+      "valence": -0.0748118619163547,
+      "arousal": -0.3727056495515748,
+      "dominance": -0.6898925642872702,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T22:40:40.532324"
+  },
+  {
+    "id": "5417b5c7-9e01-4c13-92cb-a326ad1cc59e",
+    "user_id": "test_user_4",
+    "user_input": "既兴奋又紧张，这是人生的重要时刻",
+    "memory_text": "这是一段强烈的惊讶的回忆。既兴奋又紧张，这是人生的重要时刻在我心中留下了深刻的印象，每个细节都值得珍藏。",
+    "image_url": "./storage/images\\placeholder_20250704_224045.png",
+    "emotion_result": {
+      "primary_emotion": "surprise",
+      "confidence": 0.8797900865269088,
+      "emotion_scores": {
+        "happy": 0.19877227572620065,
+        "sad": 0.2672408940864195,
+        "angry": 0.27171279433948936,
+        "fear": 0.1194076353814203,
+        "surprise": 0.8797900865269088,
+        "love": 0.26669734549935387,
+        "peaceful": 0.26583463955797887,
+        "nostalgic": 0.2651880983614675
+      },
+      "valence": -0.7241665598959914,
+      "arousal": 0.3708652447064362,
+      "dominance": -0.23415618214769496,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T22:40:45.605059"
+  },
+  {
+    "id": "067d1249-3d1c-4bfa-a3d0-b40fe596bd96",
+    "user_id": "test_user",
+    "user_input": "??????,????!",
+    "memory_text": "这是一段充满强烈的怀旧的回忆。??????,????!让我想起了过往的时光，像是翻阅泛黄的相册。",
+    "image_url": "./storage/images\\placeholder_20250704_224105.png",
+    "emotion_result": {
+      "primary_emotion": "nostalgic",
+      "confidence": 0.8066432159452277,
+      "emotion_scores": {
+        "happy": 0.13061997619456073,
+        "sad": 0.2648577600225115,
+        "angry": 0.1450605872607696,
+        "fear": 0.12077203734352407,
+        "surprise": 0.2580133915298326,
+        "love": 0.27200128286947617,
+        "peaceful": 0.22507312162738172,
+        "nostalgic": 0.8066432159452277
+      },
+      "valence": -0.7722824774443315,
+      "arousal": 0.10488967067980459,
+      "dominance": 0.9687745149306926,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T22:41:05.488804"
+  },
+  {
+    "id": "733b351a-17e8-4a38-a4bb-5aedb9b0b581",
+    "user_id": "test_user",
+    "user_input": "??????,????!",
+    "memory_text": "想起??????,????!总是让我感到强烈的平静。那种感觉就像夏日黄昏的清风。",
+    "image_url": "./storage/images\\placeholder_20250704_224123.png",
+    "emotion_result": {
+      "primary_emotion": "peaceful",
+      "confidence": 0.8103661821081288,
+      "emotion_scores": {
+        "happy": 0.10156174905536815,
+        "sad": 0.27818612187017167,
+        "angry": 0.11007638941451857,
+        "fear": 0.1433494519858384,
+        "surprise": 0.16629546262609513,
+        "love": 0.2976959326838242,
+        "peaceful": 0.8103661821081288,
+        "nostalgic": 0.23714206891021034
+      },
+      "valence": 0.13520936502694392,
+      "arousal": 0.9423028805859932,
+      "dominance": -0.25662638744968014,
+      "analysis_model": "OpenAI_API"
+    },
+    "created_at": "2025-07-04T22:41:23.428760"
+  }
+]
