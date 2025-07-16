@@ -83,6 +83,16 @@ class EmotionAnalyzer:
             logger.error(f"情感分析模型初始化失败: {str(e)}")
             # 继续运行，使用降级方案
     
+    def init_models(self):
+        """初始化模型（公共接口）"""
+        try:
+            logger.info("正在初始化情感分析模型...")
+            self._init_analyzers()
+            logger.info("✅ 情感分析模型初始化完成")
+        except Exception as e:
+            logger.error(f"情感分析模型初始化失败: {str(e)}")
+            raise
+    
     def _init_text_analyzer(self):
         """初始化文本情感分析器"""
         try:

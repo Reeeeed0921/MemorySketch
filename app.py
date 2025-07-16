@@ -364,7 +364,7 @@ def speech_to_text():
         logger.info(f"开始语音转文本处理: {temp_filepath}")
         
         # 调用语音转文本服务
-        result = speech_service.transcribe_audio(temp_filepath, language, include_gender_age)
+        result = speech_service.convert_audio_to_text(temp_filepath, language, include_gender_age)
         
         # 清理临时文件
         try:
@@ -372,8 +372,8 @@ def speech_to_text():
         except:
             pass
         
-            response_data = {
-                'success': True,
+        response_data = {
+            'success': True,
             'data': {
                 'text': result['text'],
                 'confidence': result['confidence'],
@@ -381,8 +381,8 @@ def speech_to_text():
                 'duration': result.get('duration', 0),
                 'segments': result.get('segments', [])
             },
-                'message': '语音转文本成功'
-            }
+            'message': '语音转文本成功'
+        }
         
         # 如果包含性别年龄识别结果
         if include_gender_age and 'gender_age' in result:

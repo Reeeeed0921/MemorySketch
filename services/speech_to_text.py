@@ -92,13 +92,33 @@ class SpeechToTextService:
             
             if os.path.exists(whisper_path):
                 logger.info(f"找到Whisper模型: {whisper_path}")
-                # TODO: 加载本地Whisper模型
-                # import whisper
-                # self.whisper_model = whisper.load_model("base")
-                self.models_loaded = True
-                logger.info("本地Whisper模型加载成功")
+                
+                # 检查是否有base.pt文件
+                model_file = os.path.join(whisper_path, "base.pt")
+                if os.path.exists(model_file):
+                    try:
+                        import whisper
+                        self.whisper_model = whisper.load_model("base", download_root=whisper_path)
+                        self.models_loaded = True
+                        logger.info("本地Whisper模型加载成功")
+                        
+                        # 验证模型
+                        logger.info(f"模型维度: {self.whisper_model.dims}")
+                        logger.info("Whisper模型可用于语音转文字")
+                        
+                    except Exception as e:
+                        logger.error(f"Whisper模型加载失败: {str(e)}")
+                        # 尝试备用加载方式
+                        try:
+                            self.whisper_model = whisper.load_model("base")
+                            self.models_loaded = True
+                            logger.info("使用默认路径加载Whisper模型成功")
+                        except:
+                            logger.error("所有Whisper模型加载方式都失败")
+                else:
+                    logger.warning(f"未找到Whisper模型文件: {model_file}")
             else:
-                logger.warning(f"未找到Whisper模型: {whisper_path}")
+                logger.warning(f"未找到Whisper模型目录: {whisper_path}")
                 
         except Exception as e:
             logger.error(f"Whisper模型初始化失败: {str(e)}")
@@ -422,27 +442,58 @@ class SpeechToTextService:
         try:
             logger.info("使用本地Whisper模型转换语音...")
             
-            # TODO: 实现本地Whisper模型调用
-            # result = self.whisper_model.transcribe(audio_file_path)
+            if not self.whisper_model:
+                logger.error("Whisper模型未加载")
+                return self._convert_with_simulation(audio_file_path, config_obj)
             
-            # 模拟本地模型处理
-            time.sleep(3)  # 模拟处理时间
+            # 使用本地Whisper模型进行转换
+            start_time = time.time()
             
-            sample_texts = [
-                "本地Whisper模型转换结果。",
-                "这是离线语音识别的输出。",
-                "本地模型虽然慢但是保护隐私。"
-            ]
+            # 设置转换选项
+            options = {
+                "language": self.language_codes.get(config_obj.language, "zh"),
+                "task": "transcribe",
+                "best_of": 1,
+                "beam_size": 1,
+                "patience": 1.0,
+                "condition_on_previous_text": False,
+                "temperature": 0.0,
+                "compression_ratio_threshold": 2.4,
+                "logprob_threshold": -1.0,
+                "no_speech_threshold": 0.6
+            }
             
-            transcribed_text = random.choice(sample_texts)
+            # 执行转换
+            result = self.whisper_model.transcribe(audio_file_path, **options)
+            
+            processing_time = time.time() - start_time
+            
+            # 提取转换结果
+            transcribed_text = result.get("text", "").strip()
+            segments = result.get("segments", [])
+            
+            # 计算置信度（基于分段的平均概率）
+            confidence = 0.8  # 默认置信度
+            if segments:
+                probs = []
+                for segment in segments:
+                    if "avg_logprob" in segment:
+                        # 将log概率转换为概率
+                        prob = min(1.0, max(0.0, segment["avg_logprob"] + 1.0))
+                        probs.append(prob)
+                if probs:
+                    confidence = sum(probs) / len(probs)
+            
+            logger.info(f"本地Whisper转换完成: {transcribed_text[:100]}...")
             
             return {
                 'text': transcribed_text,
-                'confidence': random.uniform(0.75, 0.88),
-                'language': config_obj.language,
+                'confidence': confidence,
+                'language': result.get("language", config_obj.language),
                 'service': 'Local_Whisper_Model',
-                'duration': random.uniform(1.0, 5.0),
-                'processing_time': time.time(),
+                'duration': result.get("duration", 0.0),
+                'processing_time': processing_time,
+                'segments': segments,
                 'success': True
             }
             
